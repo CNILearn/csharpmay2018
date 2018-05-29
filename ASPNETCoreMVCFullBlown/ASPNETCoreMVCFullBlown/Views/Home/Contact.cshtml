@@ -4,11 +4,16 @@
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-@Html.Partial("MyPartialView")
 
-@{ 
+@* HTML Helper*@
+@*@Html.Partial("MyPartialView")*@
+
+@* Tag Helper*@
+<partial name="MyPartialView" />
+
+@*@{ 
     Html.RenderPartial("MyPartialView");
-}
+}*@
 
 
 

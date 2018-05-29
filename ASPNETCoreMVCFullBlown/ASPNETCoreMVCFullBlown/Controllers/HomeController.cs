@@ -39,5 +39,17 @@ namespace ASPNETCoreMVCFullBlown.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult EditBook()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public string EditBook(Book book)
+        {
+            // if (!ModelState.IsValid) // some error
+            return $"title: {book.Title}, publisher: {book.Publisher}";
+        }
     }
 }
